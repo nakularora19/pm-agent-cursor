@@ -155,20 +155,22 @@ The sample below uses the Marketflow synthetic company. Use it to calibrate tone
 
 ---
 
-**Sample: Low availability messaging on Marketflow search**
+**Sample: Handling sparse result states in marketplace search**
+
+> This example reflects a generalized marketplace pattern and is not based on any specific product or employer.
 
 ### Problem definition
 
-Buyers who land on search result pages with fewer than five listings have no indication of why results are scarce or how to broaden their search. This creates a confusing dead-end experience that leads to session abandonment.
+Buyers who land on search result pages with very limited or sparse result sets have no indication of why results are scarce or how to broaden their search. This creates a confusing dead-end experience that leads to session abandonment.
 
 ### Proof points
 
-- Quantitative: Internal funnel data shows a 34% higher session abandonment rate on pages returning fewer than five results compared to the overall search average. Affects approximately 8% of search sessions.
+- Quantitative: Internal funnel data shows a significantly higher session abandonment rate on sparse result pages compared to average search sessions.
 - User feedback: Recurring theme in NPS verbatims: buyers describe feeling confused or thinking the product is broken when they see sparse results pages. Three separate usability sessions in Q3 surfaced the same behavior unprompted.
 
 ### Hypothesis
 
-If we surface clear messaging explaining why results are limited and provide an actionable prompt to broaden search criteria, buyers will recover their session rather than abandoning, improving conversion rate on low-availability pages without negatively impacting overall metrics.
+If we introduce contextual guidance to help users understand and recover from sparse result states, buyers will recover their session rather than abandoning, improving conversion rate on low-availability pages without negatively impacting overall metrics.
 
 ### Goal
 
@@ -184,7 +186,7 @@ Help buyers understand and recover from low availability search results instead 
 
 ### Opportunity sizing
 
-8% of search sessions currently land on low-availability pages. Of those, abandonment is 34% higher than the site average. If we reduce abandonment on these pages to the site average, the estimated recovery is approximately 2.7% of currently lost sessions. At current traffic and average order value, this represents an estimated $1.1M in incremental GMV per quarter. No engineering infrastructure changes required, making this a high return, low cost opportunity.
+A meaningful segment of search sessions land on sparse result pages. Of those, abandonment is significantly higher than the site average. If we reduce abandonment on these pages to the site average, the estimated recovery is approximately 2.7% of currently lost sessions. At current traffic and average order value, this represents an estimated $1.1M in incremental GMV per quarter. No engineering infrastructure changes required, making this a high return, low cost opportunity.
 
 ### Phased roadmap
 

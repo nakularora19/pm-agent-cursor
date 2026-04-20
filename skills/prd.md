@@ -142,28 +142,30 @@ Length: as short as it can be while covering all eight sections completely. Cut 
 
 ## Sample output
 
-The sample below covers the MVP phase of the low availability messaging project from Marketflow. It is abbreviated to illustrate tone and structure, not to show every requirement.
+The sample below covers the MVP phase of the sparse result state messaging project from Marketflow. It is abbreviated to illustrate tone and structure, not to show every requirement.
 
 ---
 
-**Sample: Low availability messaging MVP**
+**Sample: Handling sparse result states MVP**
+
+> This example reflects a generalized marketplace pattern and is not based on any specific product or employer.
 
 ### Phase overview
 
-This is the MVP phase of the low availability messaging project on Marketflow search. It delivers clear messaging and a recovery prompt to buyers who land on search result pages with fewer than five listings. This is Phase 1 of 2 as defined in the opportunity scoping doc: `projects/low-availability-messaging.md`. Phase 2 (personalized recovery recommendations) will be scoped after this phase readout.
+This is the MVP phase of the sparse result state messaging project on Marketflow search. It delivers clear messaging and a recovery prompt to buyers who land on search result pages below the defined sparse results threshold. This is Phase 1 of 2 as defined in the opportunity scoping doc: `projects/sparse-result-states.md`. Phase 2 (personalized recovery recommendations) will be scoped after this phase readout.
 
 ### Problem reminder
 
-Buyers hitting low availability pages today have no context for why results are sparse and no clear path to recover their search. This phase directly addresses that gap for the MVP case.
+Buyers hitting sparse result pages today have no context for why results are limited and no clear path to recover their search. This phase directly addresses that gap for the MVP case.
 
 ### Goals and success metrics
 
-Goal: Reduce session abandonment on low availability pages by giving buyers a clear explanation and one actionable next step.
+Goal: Reduce session abandonment on sparse result pages by giving buyers a clear explanation and one actionable next step.
 
 | Metric | Baseline | Target | Type |
 |---|---|---|---|
-| Session abandonment on low-availability pages | 34% above site average | At or below site average | Primary |
-| Search refinement rate on low-availability pages | Not instrumented | Increase vs. control | Primary |
+| Session abandonment on sparse result pages | significantly above site average | At or below site average | Primary |
+| Search refinement rate on sparse result pages | Not instrumented | Increase vs. control | Primary |
 | Overall search to checkout conversion rate | 3.2% | No regression | Guardrail |
 
 ### Scope
@@ -171,7 +173,7 @@ Goal: Reduce session abandonment on low availability pages by giving buyers a cl
 In scope:
 - Messaging component explaining why results are limited
 - Single recovery CTA: broaden search criteria (adjusts radius or removes filters)
-- Trigger logic: display when result count is below five
+- Trigger logic: display when result count is below the defined sparse results threshold
 - Mobile and desktop responsive implementation
 - Experiment setup for A/B test against current experience
 
@@ -181,13 +183,13 @@ Out of scope:
 - Changes to search ranking or result fetching logic
 
 Open questions:
-- What is the exact threshold for "low availability"? Currently assuming fewer than five results. Confirm with DS partner by [date].
+- What is the exact threshold for "low availability"? Currently assuming below the defined sparse results threshold. Confirm with DS partner by [date].
 - Should the banner persist if the buyer dismisses it? Owner: frontend engineering lead. Needed before build starts.
 
 ### User stories and requirements
 
-**Story 1: Buyer sees low availability messaging**
-As a buyer who lands on a search results page with fewer than five listings, I want to understand why results are limited so that I do not think the product is broken.
+**Story 1: Buyer sees sparse result state messaging**
+As a buyer who lands on a search results page below the defined sparse results threshold, I want to understand why results are limited so that I do not think the product is broken.
 
 Acceptance criteria:
 - Messaging is displayed when result count is below the defined threshold
@@ -211,7 +213,7 @@ Edge cases:
 
 ### Design and UX notes
 
-Wireframes in progress. Design lead to share by [date]. Key constraint: the messaging component must use the existing banner component from the design system. No new components to be created in this phase.
+Wireframes in progress. Design lead to share by [date]. Key constraint: the messaging component must use existing components from the design system where possible. No net new components to be created in this phase.
 
 ### Dependencies and risks
 

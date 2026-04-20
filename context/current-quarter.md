@@ -54,7 +54,7 @@ These are the initiatives in flight this quarter. Reference these when scoping t
 |---|---|---|
 | Smart ranking v2 | Reranking search results using real-time behavioral signals | In experiment |
 | Filters redesign | Simplifying filter UX to reduce friction on mobile | In development |
-| Low availability messaging | Surfacing scarcity signals to improve decision confidence | Experiment readout pending |
+| Sparse result state messaging | Contextual guidance for users encountering sparse search results | Experiment readout pending |
 | Seller badge system | Trust signals on listings to improve buyer confidence | Discovery |
 | Checkout simplification | Reducing steps in the checkout flow for returning buyers | Scoping |
 
